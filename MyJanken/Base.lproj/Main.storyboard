@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyJanken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-yq-jGr">
+                                <rect key="frame" x="0.0" y="742" width="414" height="120"/>
+                                <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="K8U-yU-9Qh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="A子とじゃんけんする🐰">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08l-Xm-c3v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" これからじゃんけんをします！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMq-Q8-8Zf">
+                                <rect key="frame" x="0.0" y="702" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nr2-9Y-rDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAu-d3-BOa">
+                                <rect key="frame" x="0.0" y="36" width="414" height="628"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.27058823529411763" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mgf-yq-jGr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2ww-Gt-r3O"/>
+                            <constraint firstItem="DAu-d3-BOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F8N-5x-gaC"/>
+                            <constraint firstItem="mgf-yq-jGr" firstAttribute="top" secondItem="nMq-Q8-8Zf" secondAttribute="bottom" id="Iav-qa-Cxx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAu-d3-BOa" secondAttribute="trailing" id="Wqh-ik-vOh"/>
+                            <constraint firstItem="mgf-yq-jGr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="X9H-EM-G6N"/>
+                            <constraint firstItem="DAu-d3-BOa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c2J-Io-RAU"/>
+                            <constraint firstItem="nMq-Q8-8Zf" firstAttribute="top" secondItem="DAu-d3-BOa" secondAttribute="bottom" id="cfB-TU-csK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nMq-Q8-8Zf" secondAttribute="trailing" id="ehy-j9-V3k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mgf-yq-jGr" secondAttribute="trailing" id="mJy-vs-ZSh"/>
+                            <constraint firstItem="nMq-Q8-8Zf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vp7-DH-rmI" userLabel="これからじゃんけんをします！.leading = Safe Area.leading"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerImageView" destination="DAu-d3-BOa" id="dU1-pg-nt5"/>
+                        <outlet property="answerLabel" destination="nMq-Q8-8Zf" id="oU3-Du-E9g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="24"/>
+        </scene>
+    </scenes>
+</document>
